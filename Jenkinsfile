@@ -21,6 +21,7 @@ pipeline {
         stage('Results'){
             steps{
                 echo 'Results'
+                sh "**/build/test-results/test/TEST-*.xml"
             }
         }
     }
