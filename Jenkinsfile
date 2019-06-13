@@ -15,13 +15,12 @@ pipeline {
         stage('Build'){
             steps{
                 echo 'Build'
-                sh "./gradlew clean test jar"
+                sh "./gradlew clean test jar --stacktrace"
             }
         }
         stage('Results'){
             steps{
                 echo 'Results'
-                sh "**/build/test-results/test/TEST-*.xml"
             }
         }
     }
