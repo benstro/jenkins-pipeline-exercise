@@ -22,7 +22,7 @@ pipeline {
             steps{
                 echo 'Results'
                 junit '**/build/test-results/test/TEST-*.xml'
-                archive: 'build/libs*.jar'
+                archiveArtifacts artifacts: 'build/*.jar'
 
             }
         }
