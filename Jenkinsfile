@@ -12,5 +12,6 @@ node {
         junit '**/build/test-results/test/TEST-*.xml'
         archiveArtifacts 'build/libs/*'
         echo "result"
+        
     }
 }
